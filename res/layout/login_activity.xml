@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+    
+    
+  <TextView android:id="@+id/companytext"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_centerHorizontal="true"
+      	android:layout_marginTop="50dp"
+      	android:textStyle="bold"
+      	android:text="@string/companytext"
+      	android:textColor="@android:color/white"
+      	android:textSize="28sp"/>
+    
+  <TextView android:id="@+id/platformtext"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_below="@id/companytext"
+      	android:layout_marginTop="16dp"
+      	android:layout_centerHorizontal="true"
+      	android:textStyle="bold"
+      	android:text="@string/manager_plat"
+      	android:textColor="@android:color/white"
+      	android:textSize="24sp"/>
+    
+  
+  <ImageView android:id="@+id/login_logo"
+      android:layout_width="142dp"
+      android:layout_height="160dp"
+      android:src="@drawable/company_logo"
+      android:layout_below="@id/platformtext"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="30dp"/>
+  
+  <EditText 
+      android:id="@+id/name_edit"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/login_logo"
+      android:layout_marginTop="30dp"
+      android:layout_centerHorizontal="true"
+      android:drawableLeft="@drawable/name_edit_tab"
+      android:background="@drawable/shap_edit_bg"
+      android:textColor="@android:color/white"
+      android:hint="@string/name_hint"
+      android:paddingTop="8dp"
+      android:paddingBottom="8dp"
+      android:paddingLeft="20dp"
+      android:drawablePadding="16dp"
+      android:textColorHint="#b7b7b7"
+      />
+  
+  <EditText 
+      android:id="@+id/pwd_edit"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/name_edit"
+      android:layout_marginTop="15dp"
+      android:layout_centerHorizontal="true"
+      android:drawableLeft="@drawable/pwd_edit_tab"
+      android:background="@drawable/shap_edit_bg"
+      android:textColor="@android:color/white"
+      android:hint="@string/pwd_hint"
+      android:paddingTop="8dp"
+      android:password="true"
+      android:paddingBottom="8dp"
+      android:paddingLeft="20dp"
+      android:drawablePadding="16dp"
+      android:textColorHint="#b7b7b7"
+      />
+  
+  <RelativeLayout 
+      android:id="@+id/login_bt_layout"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/pwd_edit"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="15dp">
+      
+      <Button
+          android:id="@+id/login_sure"
+          android:layout_width="120dp"
+          android:layout_height="wrap_content"
+          android:text="@string/login_sure"
+          android:textSize="20sp"
+          android:gravity="center"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
+          android:textColor="#b7b7b7"
+          android:background="@drawable/login_selector"/>
+      <Button
+          android:id="@+id/login_cancel"
+          android:layout_width="120dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:text="@string/cancel"
+          android:textSize="20sp"
+          android:gravity="center"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
+          android:textColor="#b7b7b7"
+          android:background="@drawable/login_selector"/>
+  </RelativeLayout>
+    <RelativeLayout 
+      android:id="@+id/other_layout"
+      android:layout_width="290dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/login_bt_layout"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp">
+        
+       <!--   <TextView 
+        android:id="@+id/forget_pwd"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:text="@string/forget_pwd"
+      	android:textColor="@android:color/white"
+      	android:layout_centerVertical="true"
+      	android:textSize="16sp" />-->
+        
+       <TextView 
+        android:id="@+id/forget_pwd_text"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_centerVertical="true"
+      	android:layout_alignParentRight="true"
+      	android:text="@string/remenber_pwd"
+      	android:textColor="@android:color/white"
+      	android:textSize="16sp" />
+        
+        
+        <com.nfsw.view.SmoothCheckBox
+            android:id="@+id/remenber_pwd"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+        	app:color_checked="@color/colorAccent"
+            android:textColor="@android:color/white"
+            android:layout_toLeftOf="@id/forget_pwd_text"
+            android:layout_marginRight="4dp"
+            android:textSize="12sp"
+            android:text="@string/remenber_pwd"/>
+        
+    </RelativeLayout>
+    
+    
+
+</RelativeLayout>

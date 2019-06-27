@@ -1,0 +1,228 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+ 	<RelativeLayout 
+ 	    android:id="@+id/actionbar_layout"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="40dp"
+ 	    android:background="@color/airblue">
+ 	    
+ 	    <TextView 
+ 	        android:id="@+id/title_name"
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        android:layout_centerInParent="true"
+ 	        android:textSize="22sp"
+ 	        android:textColor="@android:color/white"
+ 	        android:text="签到"/>
+ 	     
+ 	     
+ 	     
+ 	      <TextView 
+ 	        android:id="@+id/title_data1"
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        android:layout_toRightOf="@id/title_name"
+ 	        android:layout_centerVertical="true"
+ 	        android:textSize="11sp"
+ 	        android:textColor="@android:color/white"
+ 	        android:text="8"/>
+ 	     
+ 	     
+ 	     <TextView 
+ 	        android:id="@+id/title_data2"
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        android:layout_toRightOf="@id/title_data1"
+ 	        android:layout_centerVertical="true"
+ 	        android:textSize="11sp"
+ 	        android:textColor="@android:color/white"
+ 	        android:text="（ 8 ）"/>
+ 	</RelativeLayout>
+ 	
+ 	
+ 	<FrameLayout 
+ 	    android:id="@+id/content_fragment"
+ 	    android:layout_height="500dp"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_above="@id/actionbar_layout">
+ 	    
+ 	</FrameLayout>
+ 	
+ 	
+ 	
+ <LinearLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true" 
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        
+     
+     <!-- 签到 -->
+     <RelativeLayout 
+         android:id="@+id/sign_layout"
+         android:layout_width="200dp"
+         android:layout_height="50dp">
+         
+         
+         <ImageView 
+             android:id="@+id/sign_img"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginTop="6dp"
+             android:layout_centerHorizontal="true"
+             android:src="@drawable/sign_in_select"/>
+         
+         
+         <TextView 
+         android:id="@+id/sign_text"
+         android:layout_width="200dp"
+         android:layout_height="36dp"
+         android:layout_below="@id/sign_img"
+         android:layout_centerHorizontal="true"
+         android:text="@string/sign"
+         android:gravity="center"
+         android:textColor="@color/bottom_tabs_normal"
+         android:textSize="13sp"/>  
+         
+         
+     </RelativeLayout>
+     
+     
+         
+     <!-- 上报-->
+     <RelativeLayout 
+         android:id="@+id/post_layout"
+         android:layout_width="200dp"
+         android:layout_height="50dp">
+         
+         
+         <ImageView 
+             android:id="@+id/post_img"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginTop="6dp"
+             android:layout_centerHorizontal="true"
+             android:src="@drawable/post_normal"/>
+         
+         
+         <TextView 
+         android:id="@+id/post_text"
+         android:layout_width="200dp"
+         android:layout_height="36dp"
+         android:layout_below="@id/post_img"
+         android:layout_centerHorizontal="true"
+         android:text="@string/post"
+         android:gravity="center"
+         android:textColor="@color/bottom_tabs_normal"
+         android:textSize="13sp"/>  
+         
+         
+     </RelativeLayout>
+     
+     
+     <!-- 浏览-->
+     <RelativeLayout 
+         android:id="@+id/browse_layout"
+         android:layout_width="200dp"
+         android:layout_height="50dp">
+         
+         
+         <ImageView 
+             android:id="@+id/browse_img"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginTop="6dp"
+             android:layout_centerHorizontal="true"
+             android:src="@drawable/browse_normal"/>
+         
+         
+         <TextView 
+         android:id="@+id/browse_text"
+         android:layout_width="200dp"
+         android:layout_height="36dp"
+         android:layout_below="@id/browse_img"
+         android:layout_centerHorizontal="true"
+         android:text="@string/browse"
+         android:gravity="center"
+         android:textColor="@color/bottom_tabs_normal"
+         android:textSize="13sp"/>  
+         
+     </RelativeLayout>
+         
+     
+      <!-- 设置-->
+     <RelativeLayout 
+         android:id="@+id/settings_layout"
+         android:layout_width="200dp"
+         android:layout_height="50dp">
+         
+         
+         <ImageView 
+             android:id="@+id/settings_img"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginTop="6dp"
+             android:layout_centerHorizontal="true"
+             android:src="@drawable/settings_normal"/>
+         
+         
+         <TextView 
+         android:id="@+id/settings_text"
+         android:layout_width="200dp"
+         android:layout_height="36dp"
+         android:layout_below="@id/settings_img"
+         android:layout_centerHorizontal="true"
+         android:text="@string/settings"
+         android:gravity="center"
+         android:textColor="@color/bottom_tabs_normal"
+         android:textSize="13sp"/>  
+         
+     </RelativeLayout>
+     
+    </LinearLayout> 
+    
+ 	<LinearLayout 
+ 	    android:id="@+id/line"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="1dp"
+ 	    android:background="@color/light_dark"
+ 	    android:layout_above="@id/tabs"
+ 	    android:orientation="horizontal">
+ 	    
+ 	</LinearLayout>
+ 	
+ 	<!--  <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_height="1000dp"
+        android:layout_width="match_parent"
+        android:layout_above="@id/line"
+        android:visibility="gone"
+        >
+        
+    </com.amap.api.maps.MapView>
+    
+    <RelativeLayout
+        android:id="@+id/setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@id/line"
+        android:background="@color/background_tab_pressed">
+      
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="30sp"
+            android:text="@string/settings"/>
+        
+    </RelativeLayout>-->
+    
+    
+
+</RelativeLayout>

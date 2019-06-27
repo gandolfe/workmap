@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/setting_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    
+    <LinearLayout 
+        android:id="@+id/worker_no_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="120dp">
+
+        
+        <ImageView 
+            android:id="@+id/worker_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/worker_no_img"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginLeft="6dp"
+            android:text="@string/worker_no"/>
+        <TextView 
+            android:id="@+id/worker_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="micle"/>
+        
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:id="@+id/worker_name_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/worker_no_layout"
+         android:layout_marginLeft="120dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView 
+            android:id="@+id/worker_name_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/worker_name_img"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:textSize="24sp"
+            android:text="@string/worker_name"/>
+        <TextView 
+            android:id="@+id/worker_name_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="003"/>
+        
+    </LinearLayout>
+    
+    
+    
+    <Button
+          android:id="@+id/sure_exit"
+          android:layout_width="120dp"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/worker_name_layout"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="10dp"
+          android:text="@string/exit"
+          android:textSize="24sp"
+          android:gravity="center"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
+          android:textColor="#b7b7b7"
+          android:background="@drawable/logout_selector"/>
+
+ 	  	
+
+</RelativeLayout>

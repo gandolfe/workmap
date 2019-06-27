@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yangyunsheng.locationmap"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/> 
+     
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用于申请调用A-GPS模块-->
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+<!--用于访问GPS定位-->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+<!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+
+    <application
+        android:name="com.nfsw.locationmap.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/company_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+       
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="7b5a5e6b5e7b7f636665b03de0734cdc"/>
+        
+        
+        <activity
+            android:name="com.nfsw.locationmap.MainActivity_old"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity 
+            android:name="com.nfsw.locationmap.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name="com.nfsw.locationmap.LoginActivity">
+        </activity>
+        
+        <activity 
+            android:name="com.nfsw.locationmap.MainActivity">
+            
+        </activity>
+         <activity 
+           android:name="com.nfsw.locationmap.ShowBigImgActivity"
+           android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+        </activity>
+        
+        <!-- 定位服务 Service-->
+        <service android:name="com.amap.api.location.APSService"></service>
+        <service android:name="com.nfsw.service.LocationService"></service>
+        <service 
+            android:name="com.nfsw.service.NetService">
+            <intent-filter>
+                <action android:name="INTENT.ACTION.NETWORKSERVICE_WORKER"></action>
+            </intent-filter>
+        </service>
+        <receiver 
+            android:name="com.nfsw.service.BootBroadCastReceiver">
+            <intent-filter>  
+                    <action android:name="android.intent.action.BOOT_COMPLETED"></action>  
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.nfsw.utils.ConnectBroadCastReceiver">
+            <intent-filter >
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.nfsw.service.ShutDownBroadCastReceiver">
+            <intent-filter >
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+            </intent-filter>
+        </receiver>
+        
+         <receiver android:name="com.nfsw.service.SchedulReceiver">
+            <intent-filter >
+                <action android:name="com.nfsw.action.ACTION_LOCATION_ALARM"/>
+            </intent-filter>
+        </receiver>
+        
+        <service 
+            android:name="com.nfsw.service.KeepLiveService"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
+            
+    </application>
+
+</manifest>

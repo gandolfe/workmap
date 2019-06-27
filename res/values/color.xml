@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_red">#ff1493</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="dark">#666666</color>
+    <color name="transparent">#a0000000</color>
+    <color name="airblue">#33ccff</color>
+    <color name="blue01">#ff29b3ff</color>
+    <color name="light_red">#ff99ff</color> 
+    <color name="light_dark">#d0d0d0</color>
+    <color name="light_whit">#f0f0f0</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="bottom_tabs_press">#2a7cf8</color>
+    <color name="bottom_tabs_normal">#999999</color>
+     <color name="lightgrey">#D3D3D3</color><!--亮灰色 -->
+</resources>

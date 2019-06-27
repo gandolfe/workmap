@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    
+     <RelativeLayout 
+         android:id="@+id/exceptions_detail"
+         android:layout_width="match_parent"
+         android:layout_height="216dp"
+         android:layout_alignParentBottom="true">
+ 	    
+         <LinearLayout 
+             android:id="@+id/type_layout"
+             android:layout_height="30dp"
+             android:layout_width="600dp"
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="10dp"
+             android:background="@drawable/border"
+             android:orientation="horizontal">
+             
+             <RelativeLayout 
+                 android:id="@+id/type_select"
+                 android:layout_width="100dp"
+                 android:layout_height="match_parent"
+                 android:background="@drawable/type_selector">
+             
+             <TextView 
+                 android:id="@+id/type_name"
+                 android:layout_width="80dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="2dp"
+                 android:layout_centerVertical="true"
+                 android:layout_gravity="center_vertical"
+                 android:text="污污污"/>
+             
+             <RelativeLayout 
+                 android:id="@+id/type_line"
+                 android:layout_width="1dp"
+                 android:layout_height="match_parent"
+                 android:background="@color/light_dark"
+                 android:layout_alignParentRight="true"
+                 >
+                 
+             </RelativeLayout>
+             
+             <ImageView 
+                 android:id="@+id/type_tab"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_toLeftOf="@id/type_line"
+                 android:layout_centerVertical="true"
+                 android:src="@drawable/type_tab_down"
+                 android:layout_marginRight="2dp"/>
+             
+             </RelativeLayout>
+             
+              <TextView 
+                 android:id="@+id/address_name"
+                 android:layout_height="match_parent"
+                 android:layout_width="wrap_content"
+                 android:gravity="center_vertical"
+                 android:layout_marginLeft="4dp"
+                 android:textSize="12sp"
+                 android:text="异常位置名"/>
+         </LinearLayout>
+         
+         
+         <EditText
+              android:id="@+id/exception_des"
+              android:layout_width="230dp"
+              android:layout_height="120dp"
+              android:layout_marginTop="5dp"
+              android:layout_marginLeft="10dp"
+              android:layout_alignParentLeft="true"
+              android:layout_below="@+id/type_layout"
+              android:background="@drawable/border"
+              android:editable="true"
+              android:gravity="top"
+              android:textSize="14sp"
+              android:ems="10" >
+          </EditText>
+         
+         <ImageView 
+             android:id="@+id/image_view"
+             android:layout_width="82dp"
+             android:layout_height="82dp"
+           	 android:background="@drawable/border"
+             android:layout_toRightOf="@id/exception_des"
+             android:layout_below="@id/type_layout"
+             android:layout_marginLeft="10dp"
+             android:padding="2dp"
+             android:layout_marginTop="24dp"
+             android:src="@drawable/post_img_selector"/>
+         <!--   -->
+         
+          
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:orientation="horizontal"
+              android:layout_marginTop="2dp"
+              android:layout_below="@id/exception_des"
+              >
+              
+            <com.nfsw.view.AudioRecorderButton
+            android:id="@+id/record_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_recorder_normal"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:padding="5dp"
+            android:text="@string/str_recorder_normal"
+            android:textColor="#727272" />   
+              
+              
+             <FrameLayout 
+	   	 	android:id="@+id/voice_btn"
+	    	android:layout_width="80dp"
+	    	android:layout_height="36dp"
+	    	android:layout_centerVertical="true"
+	    	android:layout_toRightOf="@id/record_btn"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+	    	android:background="@drawable/boder_bound"
+	    	android:visibility="invisible"
+	    	>
+	   	 <View android:id="@+id/id_recoder_anim"
+	        android:layout_width="25dp"
+	        android:layout_height="25dp"
+	        android:layout_gravity="center_vertical|right"
+	        android:background="@drawable/adj"
+	        
+	        />
+	    
+		</FrameLayout>
+         
+            
+          </RelativeLayout>
+          
+          
+          <ImageView 
+             android:id="@+id/send_btn"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:src="@drawable/send_selector"
+             android:layout_below="@id/exception_des"
+             android:layout_toRightOf="@id/exception_des"
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="10dp"/>
+          
+           
+          
+     </RelativeLayout>
+     
+      <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_height="500dp"
+        android:layout_width="match_parent"
+        android:layout_above="@id/exceptions_detail">
+    </com.amap.api.maps.MapView>
+</RelativeLayout>

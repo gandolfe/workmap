@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">工人巡检</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="companytext">昆明南方水务有限公司</string>
+	<string name="manager_plat">管网维护管理平台</string>
+    <string name="name_hint">用户名</string>
+    <string name="pwd_hint">密码</string>
+    <string name="login_sure">登录</string>
+    <string name="cancel">取消</string>
+	<string name="forget_pwd">忘记密码</string>
+	<string name="remenber_pwd">是否记住密码?</string>
+	<string name="loading_text">正在登录</string>
+	<string name="group_member">小组成员</string>
+	<string name="check_plan">巡检计划</string>
+	
+	<string name="sign">签到</string>
+	<string name="post">上报</string>
+	<string name="browse">浏览</string>
+	<string name="settings">设置</string>
+	<string name="worker_no">账号:</string>
+	<string name="worker_name">姓名:</string>
+	<string name="exit">退出账号</string>
+	
+	<string name="sure_sign">确认签到</string>
+	<string name="already_sign">已经签到</string>
+	
+	 <string name="str_recorder_normal">按住说话</string>
+    <string name="str_recorder_recording">松开结束</string>
+    <string name="str_recorder_want_cancel">松开手指，取消发送</string>
+</resources>

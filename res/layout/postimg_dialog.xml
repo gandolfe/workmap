@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="120dp" 
+    android:background="@drawable/border">
+    
+    <TextView android:id="@+id/camera"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:text="拍照"
+        android:background="@drawable/postimg_dialog_selector"/>
+    
+     <TextView android:id="@+id/photos"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        android:text="相册"
+        android:background="@drawable/postimg_dialog_selector"/>
+
+</RelativeLayout>
